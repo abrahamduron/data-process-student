@@ -14,10 +14,9 @@ def main():
     pipeline = Dataprocess(DATA)
     print(pipeline)
     pipeline.create_careers(DATA)
+    #Careers(pipeline.create_careers(DATA)).save(db)
     pipeline.create_students()
     pipeline.create_enrollments()
-
-    print(DATA[1])
 
     return True
 
