@@ -3,12 +3,12 @@ class Dataprocess:
 
     def __init__(self, data):
         self.__data = data
+        self.carreras = []
 
     def create_careers(self, data):
-        if data[180] in data:
-            print("Name:", data[180])
-        else:
-            print("No such student!")
+        for e in data:
+            temp_carreras = Careers(e['carrera'])
+            self.carreras.append(temp_carreras)
 
     def create_courses(self):
         ## Do something to create courses on your mongodb collection using __data
