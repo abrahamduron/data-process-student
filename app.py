@@ -11,10 +11,14 @@ def main():
     Enrollments.delete_all(db)
     Students.delete_all(db)
 #########################################
+    Courses('Teatro').save(db)
+    Courses('Filosofia').save(db)
+    Careers('Arquitectura').save(db)
+    Careers('Psicologia').save(db)
     pipeline = Dataprocess(DATA)
     print(pipeline)
     pipeline.create_careers(DATA)
-    #Careers(pipeline.create_careers(DATA)).save(db)
+    Careers(pipeline.create_careers(DATA)).save(db)
     pipeline.create_students()
     pipeline.create_enrollments()
 
