@@ -1,8 +1,12 @@
 from classes.Careers import Careers
+from classes.DbMongo import DbMongo
+
 class Dataprocess:
 
     def __init__(self, data):
+        client, db = DbMongo.getDB()
         self.__data = data
+        self.__collection = "career_students"
         self.carreras = []
 
     def create_careers(self, data):
