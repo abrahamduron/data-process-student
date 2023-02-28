@@ -1,8 +1,6 @@
 import pymongo
 import os
-
 class DbMongo:
-
     @staticmethod
     def getDB():
         user = os.environ['USERMONGO']
